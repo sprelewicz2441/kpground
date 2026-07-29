@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kathryn's Playground — Fun Browser Games by Scott Prelewicz</title>
+<meta name="description" content="Kathryn's Playground is a free browser game site created by developer Scott Prelewicz for his daughter Kathryn. Play KatTrap, a top-down kitchen chase game, with more games on the way.">
+<meta name="author" content="Scott Prelewicz">
+<meta name="keywords" content="Scott Prelewicz, Kathryn's Playground, KatTrap, kpground, browser games, indie games, kids games, memory match game">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kpground.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kathryn's Playground">
+<meta property="og:title" content="Kathryn's Playground — Fun Browser Games by Scott Prelewicz">
+<meta property="og:description" content="A free browser game site built by developer Scott Prelewicz for his daughter Kathryn. Play KatTrap now, with more games on the way.">
+<meta property="og:url" content="https://kpground.com/">
+<meta property="og:image" content="https://kpground.com/assets/hero-playground-notext.jpg">
+<meta property="og:image:width" content="1248">
+<meta property="og:image:height" content="832">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kathryn's Playground — Fun Browser Games by Scott Prelewicz">
+<meta name="twitter:description" content="A free browser game site built by developer Scott Prelewicz for his daughter Kathryn. Play KatTrap now, with more games on the way.">
+<meta name="twitter:image" content="https://kpground.com/assets/hero-playground-notext.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://kpground.com/#website",
+      "name": "Kathryn's Playground",
+      "alternateName": "KPGround",
+      "url": "https://kpground.com/",
+      "description": "A free browser game site created by developer Scott Prelewicz for his daughter Kathryn.",
+      "author": { "@id": "https://kpground.com/#scott-prelewicz" },
+      "creator": { "@id": "https://kpground.com/#scott-prelewicz" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://kpground.com/#scott-prelewicz",
+      "name": "Scott Prelewicz",
+      "jobTitle": "Software Developer",
+      "description": "Scott Prelewicz is the developer and creator of Kathryn's Playground (kpground.com), a browser game site he builds for his daughter Kathryn, including the game KatTrap.",
+      "url": "https://kpground.com/"
+    },
+    {
+      "@type": "VideoGame",
+      "name": "KatTrap",
+      "url": "https://kpground.com/games/kattrap/index.html",
+      "description": "A top-down kitchen chase game: play as the cat hunting the mouse, or the mouse escaping the cat, while avoiding a wandering dog.",
+      "genre": "Arcade",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web browser",
+      "author": { "@id": "https://kpground.com/#scott-prelewicz" },
+      "isPartOf": { "@id": "https://kpground.com/#website" }
+    },
+    {
+      "@type": "VideoGame",
+      "name": "Memory Match",
+      "url": "https://kpground.com/games/memory/index.html",
+      "description": "A classic card-matching memory game featuring photos of Kathryn.",
+      "genre": "Puzzle",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web browser",
+      "author": { "@id": "https://kpground.com/#scott-prelewicz" },
+      "isPartOf": { "@id": "https://kpground.com/#website" }
+    }
+  ]
+}
+</script>
+<meta name="theme-color" content="#5FA8D3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23e8734a'/%3E%3Ctext x='32' y='43' font-family='Arial, sans-serif' font-weight='800' font-size='34' fill='white' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; }
+    a { color: inherit; }
+    a:hover { color: inherit; }
+  </style>
+</helmet>
+
+<div style="min-height:100vh; width:100%; font-family: 'Nunito', sans-serif; position: relative; box-sizing: border-box;">
+
+  <sc-if value="{{ showBackgroundArt }}" hint-placeholder-val="{{ true }}">
+    <div style="position:fixed; inset:0; z-index:0; overflow:hidden;" aria-hidden="true">
+      <img src="./assets/hero-playground-notext.jpg" alt="" role="presentation" style="width:100%; height:100%; object-fit:cover; object-position: center 66%;">
+      <div style="position:absolute; inset:0; background: oklch(0.97 0.03 95 / 0.06);"></div>
+      <div style="position:absolute; inset:0; background: linear-gradient(180deg, oklch(0.15 0.02 240 / 0.18) 0%, transparent 24%, transparent 58%, oklch(0.15 0.02 40 / 0.34) 100%);"></div>
+    </div>
+  </sc-if>
+  <sc-if value="{{ !showBackgroundArt }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed; inset:0; z-index:0; background: linear-gradient(160deg, oklch(0.9 0.06 220), oklch(0.86 0.08 140));"></div>
+  </sc-if>
+
+  <a href="#main-content" style="position:absolute; left:-999px; top:0; z-index:50; background: oklch(0.99 0 0); color: oklch(0.2 0.02 40); padding:10px 18px; border-radius:0 0 10px 0; font-weight:700;" style-focus="left:0;">Skip to games</a>
+
+  <header style="position:relative; z-index:2; box-sizing:border-box; display:flex; flex-direction:column; align-items:center; text-align:center; padding: clamp(28px, 6vh, 56px) 20px 28px; gap:16px;">
+    <h1 style="font-family:'Baloo 2', sans-serif; font-weight:800; font-size: clamp(30px, 6vw, 64px); color: oklch(0.99 0 0); margin:0; letter-spacing: 0.5px; text-transform:uppercase; line-height:1.08; text-shadow: 0 3px 14px oklch(0.15 0.02 40 / 0.55);">Kathryn's<br>Playground</h1>
+    <p style="font-size: clamp(14px, 2vw, 18px); color: oklch(0.99 0 0); max-width: 440px; margin:0; font-weight:700; letter-spacing: 0.2px; background: oklch(0.99 0.01 90 / 0.14); backdrop-filter: blur(10px); border: 1.5px solid oklch(1 0 0 / 0.5); box-shadow: 0 6px 16px oklch(0.15 0.02 40 / 0.2); padding: 9px 24px; border-radius: 999px;">Games made just for Kathryn. Pick one and start playing!</p>
+  </header>
+
+  <main id="main-content" style="position:relative; z-index:2; width:100%; max-width: 880px; margin: 0 auto; padding: 40px 20px 72px; box-sizing:border-box; display:grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 40px;">
+
+    <a href="./games/kattrap/index.html" aria-label="Play KatTrap, a top-down kitchen chase game" style="text-decoration:none; display:flex; flex-direction:column; gap:12px; border-radius: 20px; background: oklch(0.99 0.01 90 / 0.06); backdrop-filter: blur(6px); border: 1.5px solid oklch(1 0 0 / 0.55); box-shadow: 0 10px 24px oklch(0.15 0.02 40 / 0.25); padding: 22px 24px 24px; box-sizing:border-box; transition: transform 0.2s ease, background 0.2s ease;" style-hover="transform: translateY(-5px); background: oklch(0.99 0.01 90 / 0.12);" style-focus="outline: 3px solid oklch(0.99 0 0); outline-offset: 3px;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div style="width:52px; height:52px; flex-shrink:0; border-radius:50%; background: linear-gradient(135deg, oklch(0.7 0.16 40), oklch(0.6 0.17 20)); display:flex; align-items:center; justify-content:center; font-size:26px; box-shadow: 0 6px 14px oklch(0.15 0.02 40 / 0.35);">🐱</div>
+        <div style="display:flex; flex-direction:column; gap:5px; min-width:0;">
+          <h2 style="font-family:'Nunito', sans-serif; font-weight:800; font-size:22px; margin:0; color: oklch(0.99 0 0); letter-spacing: -0.2px; text-shadow: 0 2px 8px oklch(0.15 0.02 40 / 0.6);">KatTrap</h2>
+          <span style="align-self:flex-start; background: oklch(0.6 0.17 20 / 0.95); color: oklch(0.99 0.01 90); font-weight:800; font-size:11px; padding:4px 11px; border-radius:999px; font-family:'Nunito', sans-serif; letter-spacing:0.6px; text-transform:uppercase;">Play Now</span>
+        </div>
+      </div>
+      <p style="margin:0; color: oklch(0.99 0 0); font-size:14.5px; line-height:1.5; font-weight:600; text-shadow: 0 2px 6px oklch(0.15 0.02 40 / 0.55);">A kitchen chase — hunt as the cat or flee as the mouse, and dodge the wandering dog.</p>
+      <span style="font-family:'Nunito', sans-serif; font-weight:800; color: oklch(0.99 0 0); font-size:14.5px; text-shadow: 0 2px 6px oklch(0.15 0.02 40 / 0.55);">Start chasing →</span>
+    </a>
+
+    <a href="./games/memory/index.html" aria-label="Memory Match, coming soon" style="text-decoration:none; display:flex; flex-direction:column; gap:12px; border-radius: 20px; background: oklch(0.99 0.01 90 / 0.06); backdrop-filter: blur(6px); border: 1.5px solid oklch(1 0 0 / 0.55); box-shadow: 0 10px 24px oklch(0.15 0.02 40 / 0.22); padding: 22px 24px 24px; box-sizing:border-box; transition: transform 0.2s ease, background 0.2s ease;" style-hover="transform: translateY(-5px); background: oklch(0.99 0.01 90 / 0.12);" style-focus="outline: 3px solid oklch(0.99 0 0); outline-offset: 3px;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div style="width:52px; height:52px; flex-shrink:0; border-radius:50%; background: linear-gradient(135deg, oklch(0.72 0.1 200), oklch(0.6 0.12 225)); display:flex; align-items:center; justify-content:center; font-size:26px; box-shadow: 0 6px 14px oklch(0.15 0.02 40 / 0.35);">🧠</div>
+        <div style="display:flex; flex-direction:column; gap:5px; min-width:0;">
+          <h2 style="font-family:'Nunito', sans-serif; font-weight:800; font-size:22px; margin:0; color: oklch(0.99 0 0); letter-spacing: -0.2px; text-shadow: 0 2px 8px oklch(0.15 0.02 40 / 0.6);">Memory Match</h2>
+          <span style="align-self:flex-start; background: oklch(0.55 0.1 220 / 0.95); color: oklch(0.99 0.01 90); font-weight:800; font-size:11px; padding:4px 11px; border-radius:999px; font-family:'Nunito', sans-serif; letter-spacing:0.6px; text-transform:uppercase;">Coming Soon</span>
+        </div>
+      </div>
+      <p style="margin:0; color: oklch(0.99 0 0); font-size:14.5px; line-height:1.5; font-weight:600; text-shadow: 0 2px 6px oklch(0.15 0.02 40 / 0.55);">Flip, match, and remember — every card is a picture of Kathryn.</p>
+      <span style="font-family:'Nunito', sans-serif; font-weight:800; color: oklch(0.99 0 0); font-size:14.5px; text-shadow: 0 2px 6px oklch(0.15 0.02 40 / 0.55);">Being rebuilt — check back soon</span>
+    </a>
+
+  </main>
+
+  <footer style="position:relative; z-index:2; text-align:center; padding: 20px 20px 40px; box-sizing:border-box; color: oklch(0.99 0 0); font-size:14px; text-shadow: 0 2px 8px oklch(0.15 0.02 40 / 0.4);">
+    <p style="margin:0; font-weight:700;">Made with 💛 for Kathryn — kpground.com</p>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showBackgroundArt&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Background&quot;, &quot;description&quot;: &quot;Show the playground photo illustration as the full-page background&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showBackgroundArt: this.props.showBackgroundArt ?? true };
+  }
+}
+</script>
+</body>
+</html>
